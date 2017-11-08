@@ -11,6 +11,16 @@ class Player:
 		self.size = size
 		self.speed = speed
 
+	def move(self, direction):
+		if direction == "up":
+			self.coords[1] -= speed
+		if direction == "down":
+			self.coords[1] += speed
+		if direction == "right":
+			self.coords[0] += speed
+		if direction == "up":
+			self.coords[0] -= speed
+
 	def draw(self, window):
 		pygame.draw.rect(window, self.color, (self.coords, self.size))
 
@@ -34,6 +44,10 @@ while True:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			exit()
+	keys = pygame.key.get_pressed()
+	if keys[pygame.K_RIGHT]:
+		bob.move('right')
+
 	window.fill(pygame.Color("white"))
 	bob.draw(window)
 	carpet.draw(window)

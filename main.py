@@ -18,7 +18,7 @@ class Player:
 			self.coords[1] += speed
 		if direction == "right":
 			self.coords[0] += speed
-		if direction == "up":
+		if direction == "left":
 			self.coords[0] -= speed
 
 	def draw(self, window):

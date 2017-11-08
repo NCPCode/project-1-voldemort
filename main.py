@@ -22,11 +22,20 @@ bob = Player(
 	player_size,
 	5
 )
+
+carpet = Player(
+	pygame.Color("black"),
+	[275,275],
+	player_size,
+	5
+)
+
 while True:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			exit()
 	window.fill(pygame.Color("white"))
 	bob.draw(window)
+	carpet.draw(window)
 	pygame.display.update()
 	clock.tick(60)

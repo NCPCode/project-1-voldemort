@@ -47,6 +47,13 @@ while True:
 	keys = pygame.key.get_pressed()
 	if keys[pygame.K_RIGHT]:
 		bob.move('right')
+	elif keys[pygame.K_LEFT]:
+		bob.move('left')
+	if keys[pygame.K_UP]:
+ 		bob.move('up')
+	elif keys[pygame.K_DOWN]:
+ 		bob.move('down')
+
 
 	window.fill(pygame.Color("white"))
 	bob.draw(window)

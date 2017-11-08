@@ -11,6 +11,8 @@ class Player:
 		self.size = size
 		self.speed = speed
 
+	def draw(self, window):
+		pygame.draw.rect(window, self.color, (self.coords, self.size))
 
 while True:
 	for event in pygame.event.get():

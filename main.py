@@ -11,7 +11,7 @@ class Player:
 		self.size = size
 		self.speed = speed
 
-	def move(self, direction):
+	def move(self, direction, speed):
 		if direction == "up":
 			self.coords[1] -= speed
 		if direction == "down":
@@ -46,13 +46,13 @@ while True:
 			exit()
 	keys = pygame.key.get_pressed()
 	if keys[pygame.K_RIGHT]:
-		bob.move('right')
+		bob.move('right', 5)
 	elif keys[pygame.K_LEFT]:
-		bob.move('left')
+		bob.move('left', 5)
 	if keys[pygame.K_UP]:
- 		bob.move('up')
+ 		bob.move('up', 5)
 	elif keys[pygame.K_DOWN]:
- 		bob.move('down')
+ 		bob.move('down', 5)
 
 
 	window.fill(pygame.Color("white"))

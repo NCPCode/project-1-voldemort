@@ -18,7 +18,7 @@ class Player:
 			self.coords[1] += speed
 		if direction == "right":
 			self.coords[0] += speed
-		if direction == "up":
+		if direction == "left":
 			self.coords[0] -= speed
 
 	def draw(self, window):
@@ -54,6 +54,14 @@ while True:
 	elif keys[pygame.K_DOWN]:
  		bob.move('down', 5)
 
+	if keys[pygame.K_d]:
+		carpet.move('right', 5)
+	elif keys[pygame.K_a]:
+		carpet.move('left', 5)
+	if keys[pygame.K_w]:
+ 		carpet.move('up', 5)
+	elif keys[pygame.K_s]:
+ 		carpet.move('down', 5)
 
 	window.fill(pygame.Color("white"))
 	bob.draw(window)

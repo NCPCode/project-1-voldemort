@@ -13,6 +13,7 @@ class Player:
 
 	def move(self, direction, speed):
 		if direction == "up":
+
 			self.coords[1] -= speed
 		if direction == "down":
 			self.coords[1] += speed
@@ -34,7 +35,7 @@ bob = Player(
 )
 
 carpet = Player(
-	pygame.Color("black"),
+	pygame.Color("red"),
 	[275,275],
 	player_size,
 	5

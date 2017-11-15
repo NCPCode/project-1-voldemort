@@ -114,7 +114,7 @@ while True:
   if player1.has_collided(player2):
     player2.random_reset()
     count_1 = count_1 + 1
-    player2.speed = player2.speed + 0.1
+    player2.speed = player2.speed + 0.2
   if player3.has_collided(player2):
     player2.random_reset()
     count_2 = count_2 + 1
